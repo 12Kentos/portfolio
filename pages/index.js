@@ -8,13 +8,26 @@ import space from "../images/Space-Tourism-Website.jpg";
 import forkify from "../images/Forkify.jpg";
 import twitter from "../images/Twitter Clone.jpg";
 import { useState, useRef, useEffect } from "react";
+import AboutModal from "@/components/AboutModal";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaSass,
+  FaReact,
+  FaGithub,
+  FaFigma,
+} from "react-icons/fa";
+import { SiTailwindcss, SiFirebase } from "react-icons/si";
+import { DiJavascript1 } from "react-icons/di";
+import { TbBrandNextjs } from "react-icons/tb";
 
 export default function Home() {
   const [wrapperStyle, setWrapperStyle] = useState();
   const [flag, setFlag] = useState(false);
+  const [secondFlag, setSecondFlag] = useState(false);
   const wrapperRef = useRef(null);
   const scrollToRef = useRef(null);
-  const [secondFlag, setSecondFlag] = useState(false);
+  const [aboutModalOpen, setAboutModalOpen] = useState(false);
 
   useEffect(() => {
     scrollToRef.current.scrollIntoView({
@@ -25,6 +38,7 @@ export default function Home() {
   }, []);
 
   const handleSetFlag = () => {
+    setAboutModalOpen(!aboutModalOpen);
     setFlag(true);
   };
 
@@ -47,14 +61,33 @@ export default function Home() {
       // console.log(panY);
 
       if (secondFlag) {
-        console.log("First Flag");
+        // console.log("First Flag");
         setWrapperStyle({ transform: `translate(${panX}px, ${panY}px)` });
       } else {
-        console.log("Second Flag");
+        // console.log("Second Flag");
         setSecondFlag(true);
         setWrapperStyle({ transform: `translate(${-55}%, ${-60}%)` });
       }
     }
+  };
+
+  // const openAboutModal = () => {
+  //   setFlag(false);
+  //   setAboutModalOpen(!aboutModalOpen);
+  // };
+
+  // const closeAboutModal = () => {
+  //   setAboutModalOpen(!aboutModalOpen);
+  //   setFlag(true);
+  // };
+
+  const toggleAboutModalOpen = () => {
+    setAboutModalOpen(!aboutModalOpen);
+    // if (flag) {
+    //   setFlag(false);
+    // } else {
+    //   setFlag(true);
+    // }
   };
 
   return (
@@ -107,6 +140,14 @@ export default function Home() {
           imgClasses={styles["info"]}
           image={multiForm}
           urlLink={"https://12kentos.github.io/Multi-step-form/"}
+          info={"multioForm"}
+        />
+
+        <AboutModal
+          modalOpen={aboutModalOpen}
+          closeModal={toggleAboutModalOpen}
+          info="this is a test"
+          html={<FaHtml5 />}
         />
       </main>
     </>
