@@ -1,5 +1,6 @@
 import Modal from "react-modal";
 import styles from "./AboutModal.module.scss";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
 export default function ProjectModal(props) {
   return (
@@ -24,7 +25,7 @@ export default function ProjectModal(props) {
         }}
       >
         <button className={styles["close-btn"]} onClick={props.closeButton}>
-          {props.close}
+          <AiOutlineCloseCircle />
         </button>
         <div className={styles["modal-wrapper"]}>
           <h2 className={styles.h2}>About me</h2>

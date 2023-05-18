@@ -1,6 +1,7 @@
 import Modal from "react-modal";
 import Image from "next/image";
 import styles from "./ProjectModal.module.scss";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
 export default function ProjectModal(props) {
   return (
@@ -13,10 +14,10 @@ export default function ProjectModal(props) {
             backgroundColor: "rgba(216, 212, 210, 1)",
           },
           content: {
-            top: "10vh",
-            left: "20vw",
-            right: "20vw",
-            bottom: "10vh",
+            top: "5vh",
+            left: "15vw",
+            right: "15vw",
+            bottom: "5vh",
             overflow: "auto",
             WebkitOverflowScrolling: "touch",
             borderRadius: "2rem",
@@ -24,8 +25,20 @@ export default function ProjectModal(props) {
           },
         }}
       >
+        <button className={styles["close-btn"]} onClick={props.closeButton}>
+          <AiOutlineCloseCircle />
+        </button>
         <div className={styles["modal-wrapper"]}>
-          <Image src={props.image} className={styles.img} />
+          <h2 className={styles.h2} style={{ color: props.color }}>
+            {props.heading}
+          </h2>
+          <div className={styles["img-wrapper"]}>
+            <Image src={props.image} className={styles.img} />
+          </div>
+          <p className={styles.p}>{props.info}</p>
+          <div>
+            <p>Skills Used</p>
+          </div>
         </div>
       </Modal>
     </>

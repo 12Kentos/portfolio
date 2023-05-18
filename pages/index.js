@@ -20,7 +20,6 @@ import {
 import { SiTailwindcss, SiFirebase } from "react-icons/si";
 import { DiJavascript1 } from "react-icons/di";
 import { TbBrandNextjs } from "react-icons/tb";
-import { AiOutlineCloseCircle } from "react-icons/ai";
 
 export default function Home() {
   const [wrapperStyle, setWrapperStyle] = useState();
@@ -91,19 +90,6 @@ export default function Home() {
     // }
   };
 
-  // const skills = {
-  //   html: <FaHtml5 />,
-  //   css: <FaCss3Alt />,
-  //   sass: <FaSass />,
-  //   tailwind: <SiTailwindcss />,
-  //   javaScript: <DiJavascript1 />,
-  //   react: <FaReact />,
-  //   next: <TbBrandNextjs />,
-  //   firebase: <SiFirebase />,
-  //   github: <FaGithub />,
-  //   figma: <FaFigma />,
-  // };
-
   const skills = [
     <FaHtml5 className={styles.skills} />,
     <FaCss3Alt className={styles.skills} />,
@@ -116,18 +102,6 @@ export default function Home() {
     <FaGithub className={styles.skills} />,
     <FaFigma className={styles.skills} />,
   ];
-
-  // import {
-  //   FaHtml5,
-  //   FaCss3Alt,
-  //   FaSass,
-  //   FaReact,
-  //   FaGithub,
-  //   FaFigma,
-  // } from "react-icons/fa";
-  // import { SiTailwindcss, SiFirebase } from "react-icons/si";
-  // import { DiJavascript1 } from "react-icons/di";
-  // import { TbBrandNextjs } from "react-icons/tb";
 
   return (
     <>
@@ -151,6 +125,11 @@ export default function Home() {
           imgClasses={styles["info"]}
           image={twitter}
           urlLink={"https://final-twitter-clone.vercel.app/"}
+          heading={"Twitter Clone"}
+          color={"rgba(120, 192, 221, 1)"}
+          info={
+            "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'"
+          }
         />
 
         <Project
@@ -158,6 +137,11 @@ export default function Home() {
           imgClasses={styles["info"]}
           image={forkify}
           urlLink={"https://forkify-kent.netlify.app/"}
+          heading={"Forkify"}
+          color={"rgba(221, 157, 120, 1)"}
+          info={
+            "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'"
+          }
         />
 
         <Project
@@ -165,6 +149,11 @@ export default function Home() {
           imgClasses={styles["info"]}
           image={space}
           urlLink={"https://kent-space-tourism-multi-page-website.netlify.app/"}
+          heading={"Multi-page Space Tourism Site"}
+          color={"rgba(1, 1, 20, 1)"}
+          info={
+            "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'"
+          }
         />
 
         <Project
@@ -172,6 +161,11 @@ export default function Home() {
           imgClasses={styles["info"]}
           image={shoes}
           urlLink={"https://12kentos-ecommerce-product-page-main.netlify.app/"}
+          heading={"Ecommerce Product Page"}
+          color={"rgb(228, 132, 1)"}
+          info={
+            "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'"
+          }
         />
 
         <Project
@@ -179,7 +173,11 @@ export default function Home() {
           imgClasses={styles["info"]}
           image={multiForm}
           urlLink={"https://12kentos.github.io/Multi-step-form/"}
-          info={"multioForm"}
+          heading={"Multi-step Form"}
+          color={"rgba(158, 193, 238, 1)"}
+          info={
+            "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'"
+          }
         />
 
         <AboutModal
@@ -187,18 +185,7 @@ export default function Home() {
           closeModal={toggleAboutModalOpen}
           info="this is a test"
           skills={skills}
-          close={<AiOutlineCloseCircle className={styles["close-btn"]} />}
           closeButton={toggleAboutModalOpen}
-          // html={<FaHtml5 />}
-          // css={<FaCss3Alt />}
-          // sass={<FaSass />}
-          // tailwind={<SiTailwindcss />}
-          // javaScript={<DiJavascript1 />}
-          // react={<FaReact />}
-          // next={<TbBrandNextjs />}
-          // firebase={<SiFirebase />}
-          // github={<FaGithub />}
-          // figma={<FaFigma />}
         />
       </div>
     </>

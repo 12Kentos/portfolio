@@ -16,6 +16,9 @@
 
 .close-btn {
   border: none;
+  position: absolute;
+  font-size: clamp(2rem, 2vw, 3rem);
+  background-color: transparent;
 
   &:hover {
     cursor: pointer;

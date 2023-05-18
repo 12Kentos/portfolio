@@ -9,12 +9,6 @@ export default function Project(props) {
     setModalOpen(!modalOpen);
   };
 
-  let testingInfo = "Nothing";
-
-  if (props.info) {
-    testingInfo = props.info;
-  }
-
   return (
     <>
       <button className={`${props.className}`} onClick={toggleModal}>
@@ -25,7 +19,10 @@ export default function Project(props) {
         modalOpen={modalOpen}
         image={props.image}
         closeModal={toggleModal}
-        info={testingInfo}
+        heading={props.heading}
+        color={props.color}
+        info={props.info}
+        closeButton={toggleModal}
       />
     </>
   );
