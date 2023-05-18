@@ -20,6 +20,7 @@ import {
 import { SiTailwindcss, SiFirebase } from "react-icons/si";
 import { DiJavascript1 } from "react-icons/di";
 import { TbBrandNextjs } from "react-icons/tb";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
 export default function Home() {
   const [wrapperStyle, setWrapperStyle] = useState();
@@ -90,22 +91,60 @@ export default function Home() {
     // }
   };
 
+  // const skills = {
+  //   html: <FaHtml5 />,
+  //   css: <FaCss3Alt />,
+  //   sass: <FaSass />,
+  //   tailwind: <SiTailwindcss />,
+  //   javaScript: <DiJavascript1 />,
+  //   react: <FaReact />,
+  //   next: <TbBrandNextjs />,
+  //   firebase: <SiFirebase />,
+  //   github: <FaGithub />,
+  //   figma: <FaFigma />,
+  // };
+
+  const skills = [
+    <FaHtml5 className={styles.skills} />,
+    <FaCss3Alt className={styles.skills} />,
+    <FaSass className={styles.skills} />,
+    <SiTailwindcss className={styles.skills} />,
+    <DiJavascript1 className={styles.skills} />,
+    <FaReact className={styles.skills} />,
+    <TbBrandNextjs className={styles.skills} />,
+    <SiFirebase className={styles.skills} />,
+    <FaGithub className={styles.skills} />,
+    <FaFigma className={styles.skills} />,
+  ];
+
+  // import {
+  //   FaHtml5,
+  //   FaCss3Alt,
+  //   FaSass,
+  //   FaReact,
+  //   FaGithub,
+  //   FaFigma,
+  // } from "react-icons/fa";
+  // import { SiTailwindcss, SiFirebase } from "react-icons/si";
+  // import { DiJavascript1 } from "react-icons/di";
+  // import { TbBrandNextjs } from "react-icons/tb";
+
   return (
     <>
       <Head></Head>
-      <main
+      <div
         className={styles["body-wrapper"]}
         style={wrapperStyle}
         onMouseMove={mouseHandle}
         ref={wrapperRef}
       >
-        <div
+        <button
           className={styles["project-wrapper"]}
           ref={scrollToRef}
           onClick={handleSetFlag}
         >
           <p className={styles["info"]}>About me</p>
-        </div>
+        </button>
 
         <Project
           className={`${styles["project-wrapper"]} ${styles["project-four"]}`}
@@ -147,9 +186,33 @@ export default function Home() {
           modalOpen={aboutModalOpen}
           closeModal={toggleAboutModalOpen}
           info="this is a test"
-          html={<FaHtml5 />}
+          skills={skills}
+          close={<AiOutlineCloseCircle className={styles["close-btn"]} />}
+          closeButton={toggleAboutModalOpen}
+          // html={<FaHtml5 />}
+          // css={<FaCss3Alt />}
+          // sass={<FaSass />}
+          // tailwind={<SiTailwindcss />}
+          // javaScript={<DiJavascript1 />}
+          // react={<FaReact />}
+          // next={<TbBrandNextjs />}
+          // firebase={<SiFirebase />}
+          // github={<FaGithub />}
+          // figma={<FaFigma />}
         />
-      </main>
+      </div>
     </>
   );
 }
+
+// import {
+//   FaHtml5,
+//   FaCss3Alt,
+//   FaSass,
+//   FaReact,
+//   FaGithub,
+//   FaFigma,
+// } from "react-icons/fa";
+// import { SiTailwindcss, SiFirebase } from "react-icons/si";
+// import { DiJavascript1 } from "react-icons/di";
+// import { TbBrandNextjs } from "react-icons/tb";

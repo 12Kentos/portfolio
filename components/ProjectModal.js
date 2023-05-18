@@ -1,5 +1,6 @@
 import Modal from "react-modal";
 import Image from "next/image";
+import styles from "./ProjectModal.module.scss";
 
 export default function ProjectModal(props) {
   return (
@@ -9,30 +10,23 @@ export default function ProjectModal(props) {
         onRequestClose={props.closeModal}
         style={{
           overlay: {
-            position: "fixed",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
             backgroundColor: "rgba(216, 212, 210, 1)",
           },
           content: {
-            position: "absolute",
-            top: "40px",
-            left: "40px",
-            right: "40px",
-            bottom: "40px",
-            border: "1px solid #ccc",
-            background: "#fff",
+            top: "10vh",
+            left: "20vw",
+            right: "20vw",
+            bottom: "10vh",
             overflow: "auto",
             WebkitOverflowScrolling: "touch",
-            borderRadius: "4px",
-            outline: "none",
-            padding: "20px",
+            borderRadius: "2rem",
+            padding: "2rem",
           },
         }}
       >
-        <Image src={props.image} />
+        <div className={styles["modal-wrapper"]}>
+          <Image src={props.image} className={styles.img} />
+        </div>
       </Modal>
     </>
   );

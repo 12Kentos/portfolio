@@ -6,20 +6,35 @@
 }
 
 .project-wrapper {
+  border: none;
   border-radius: 2rem;
   position: absolute;
   width: 30vw;
   height: 30vh;
-  background-color: rgba(119, 235, 158, 0.829);
+  background-color: rgba(119, 235, 158, 1);
   left: 45%;
   top: 45%;
 
   transition: ease-in 400ms;
+  // opacity: 1;
 
-  &:hover {
+  &:hover,
+  &:focus {
     cursor: pointer;
     transform: scale(1.05);
+    background-color: transparent;
+    // opacity: 0;
   }
+}
+
+.skills {
+  font-size: 3.5vw;
+  color: rgb(83, 184, 117);
+}
+
+.close-btn {
+  position: absolute;
+  font-size: clamp(2rem, 2vw, 3rem);
 }
 
 .info {
@@ -28,18 +43,20 @@
   height: 100%;
   border-radius: inherit;
   object-fit: cover;
-  opacity: 0;
+  // opacity: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: white;
   object-position: top;
+  z-index: -10;
 
   transition: ease-in 400ms;
 
-  &:hover {
+  &:hover,
+  &:focus {
     cursor: pointer;
-    opacity: 1;
+    // opacity: 1;
     transform: scale(1.01);
   }
 }
@@ -47,7 +64,7 @@
 .project-one {
   width: 25vw;
   height: 35vh;
-  background-color: rgb(228, 132, 8);
+  background-color: rgb(228, 132, 1);
   top: auto;
   left: auto;
   right: 10%;
@@ -57,7 +74,7 @@
 .project-two {
   width: 20vw;
   height: 45vh;
-  background-color: rgba(221, 157, 120, 0.829);
+  background-color: rgba(221, 157, 120, 1);
   top: 10%;
   left: 15%;
 }
@@ -65,7 +82,7 @@
 .project-three {
   width: 55vw;
   height: 45vh;
-  background-color: rgba(1, 1, 20, 0.829);
+  background-color: rgba(1, 1, 20, 1);
   top: 12%;
   left: auto;
   right: 8%;
@@ -74,7 +91,7 @@
 .project-four {
   width: 25vw;
   height: 35vh;
-  background-color: rgba(120, 192, 221, 0.829);
+  background-color: rgba(120, 192, 221, 1);
   top: auto;
   left: 27%;
   bottom: 13%;
@@ -83,7 +100,7 @@
 .project-five {
   width: 20vw;
   height: 25vh;
-  background-color: rgba(158, 193, 238, 0.829);
+  background-color: rgba(158, 193, 238, 1);
   top: auto;
   left: auto;
   right: 2%;

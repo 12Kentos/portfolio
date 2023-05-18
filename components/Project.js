@@ -17,9 +17,9 @@ export default function Project(props) {
 
   return (
     <>
-      <div className={`${props.className}`} onClick={toggleModal}>
+      <button className={`${props.className}`} onClick={toggleModal}>
         <Image className={props.imgClasses} src={props.image} />
-      </div>
+      </button>
 
       <ProjectModal
         modalOpen={modalOpen}
