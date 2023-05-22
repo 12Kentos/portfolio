@@ -2,8 +2,11 @@ import Modal from "react-modal";
 import Image from "next/image";
 import styles from "./ProjectModal.module.scss";
 import { AiOutlineCloseCircle } from "react-icons/ai";
+import Link from "next/link";
 
 export default function ProjectModal(props) {
+  console.log(`The skills ${props.skills}`);
+
   return (
     <>
       <Modal
@@ -36,8 +39,25 @@ export default function ProjectModal(props) {
             <Image src={props.image} className={styles.img} />
           </div>
           <p className={styles.p}>{props.info}</p>
-          <div>
-            <p>Skills Used</p>
+          <h3 className={styles.h3}>Skills Used</h3>
+          <div className={styles.skills} style={{ color: props.color }}>
+            <Link
+              href={props.urlLink}
+              target="_blank"
+              style={{ color: props.color }}
+              className={`${styles.link} ${styles["link-left"]}`}
+            >
+              Visit Site
+            </Link>
+            {props.skills}
+            <Link
+              href={props.gitHubLink}
+              target="_blank"
+              style={{ color: props.color }}
+              className={`${styles.link} ${styles["link-right"]}`}
+            >
+              View Repo
+            </Link>
           </div>
         </div>
       </Modal>

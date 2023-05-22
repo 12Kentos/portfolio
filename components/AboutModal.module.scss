@@ -3,15 +3,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 90%;
+  height: 100%;
   gap: 2rem;
 }
 
 .skills-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  max-width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
   gap: 1rem;
+}
+
+.skills {
+  font-size: 3.5vw;
+  color: rgb(83, 184, 117);
 }
 
 .close-btn {

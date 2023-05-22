@@ -7,6 +7,7 @@ import shoes from "../images/Ecommerce-Product-Page.jpg";
 import space from "../images/Space-Tourism-Website.jpg";
 import forkify from "../images/Forkify.jpg";
 import twitter from "../images/Twitter Clone.jpg";
+import reactMeals from "../images/React-Meals.jpg";
 import { useState, useRef, useEffect } from "react";
 import AboutModal from "@/components/AboutModal";
 import {
@@ -17,7 +18,13 @@ import {
   FaGithub,
   FaFigma,
 } from "react-icons/fa";
-import { SiTailwindcss, SiFirebase } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiFirebase,
+  SiFramer,
+  SiRedux,
+  SiReactrouter,
+} from "react-icons/si";
 import { DiJavascript1 } from "react-icons/di";
 import { TbBrandNextjs } from "react-icons/tb";
 
@@ -91,16 +98,19 @@ export default function Home() {
   };
 
   const skills = [
-    <FaHtml5 className={styles.skills} />,
-    <FaCss3Alt className={styles.skills} />,
-    <FaSass className={styles.skills} />,
-    <SiTailwindcss className={styles.skills} />,
-    <DiJavascript1 className={styles.skills} />,
-    <FaReact className={styles.skills} />,
-    <TbBrandNextjs className={styles.skills} />,
-    <SiFirebase className={styles.skills} />,
-    <FaGithub className={styles.skills} />,
-    <FaFigma className={styles.skills} />,
+    <FaHtml5 />,
+    <FaCss3Alt />,
+    <FaSass />,
+    <SiTailwindcss />,
+    <DiJavascript1 />,
+    <FaReact />,
+    <SiRedux />,
+    <SiReactrouter />,
+    <TbBrandNextjs />,
+    <SiFramer />,
+    <SiFirebase />,
+    <FaGithub />,
+    <FaFigma />,
   ];
 
   return (
@@ -112,11 +122,9 @@ export default function Home() {
         onMouseMove={mouseHandle}
         ref={wrapperRef}
       >
-        <button
-          className={styles["project-wrapper"]}
-          ref={scrollToRef}
-          onClick={handleSetFlag}
-        >
+        <div className={styles.invis} ref={scrollToRef}></div>
+
+        <button className={styles["project-wrapper"]} onClick={handleSetFlag}>
           <p className={styles["info"]}>About me</p>
         </button>
 
@@ -125,11 +133,13 @@ export default function Home() {
           imgClasses={styles["info"]}
           image={twitter}
           urlLink={"https://final-twitter-clone.vercel.app/"}
+          gitHubLink={"https://github.com/12Kentos/Final-Twitter-Clone"}
           heading={"Twitter Clone"}
           color={"rgba(120, 192, 221, 1)"}
           info={
             "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'"
           }
+          skills={[skills[3], skills[6], skills[7], skills[8]]}
         />
 
         <Project
@@ -137,11 +147,13 @@ export default function Home() {
           imgClasses={styles["info"]}
           image={forkify}
           urlLink={"https://forkify-kent.netlify.app/"}
+          gitHubLink={"https://github.com/12Kentos/forkify-kent"}
           heading={"Forkify"}
-          color={"rgba(221, 157, 120, 1)"}
+          color={"rgba(246, 151, 131, 1)"}
           info={
             "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'"
           }
+          skills={[skills[0], skills[2], skills[4]]}
         />
 
         <Project
@@ -149,11 +161,15 @@ export default function Home() {
           imgClasses={styles["info"]}
           image={space}
           urlLink={"https://kent-space-tourism-multi-page-website.netlify.app/"}
+          gitHubLink={
+            "https://github.com/12Kentos/Space-tourism-multi-page-website/tree/main"
+          }
           heading={"Multi-page Space Tourism Site"}
-          color={"rgba(1, 1, 20, 1)"}
+          color={"rgba(44, 73, 107)"}
           info={
             "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'"
           }
+          skills={[skills[2], skills[5], skills[7]]}
         />
 
         <Project
@@ -161,11 +177,13 @@ export default function Home() {
           imgClasses={styles["info"]}
           image={shoes}
           urlLink={"https://12kentos-ecommerce-product-page-main.netlify.app/"}
+          gitHubLink={"https://github.com/12Kentos/ecommerce-product-page-main"}
           heading={"Ecommerce Product Page"}
           color={"rgb(228, 132, 1)"}
           info={
             "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'"
           }
+          skills={[skills[2], skills[5]]}
         />
 
         <Project
@@ -173,11 +191,27 @@ export default function Home() {
           imgClasses={styles["info"]}
           image={multiForm}
           urlLink={"https://12kentos.github.io/Multi-step-form/"}
+          gitHubLink={"https://github.com/12Kentos/Multi-step-form"}
           heading={"Multi-step Form"}
           color={"rgba(158, 193, 238, 1)"}
           info={
             "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'"
           }
+          skills={[skills[0], skills[2], skills[4]]}
+        />
+
+        <Project
+          className={`${styles["project-wrapper"]} ${styles["project-six"]}`}
+          imgClasses={styles["info"]}
+          image={reactMeals}
+          urlLink={"https://12kentos-react-meals.netlify.app/"}
+          gitHubLink={"https://github.com/12Kentos/React-Meals"}
+          heading={"Multi-step Form"}
+          color={"rgba(138, 43, 6, 1)"}
+          info={
+            "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'"
+          }
+          skills={[skills[0], skills[2], skills[4]]}
         />
 
         <AboutModal

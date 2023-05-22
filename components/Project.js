@@ -23,6 +23,9 @@ export default function Project(props) {
         color={props.color}
         info={props.info}
         closeButton={toggleModal}
+        skills={props.skills}
+        urlLink={props.urlLink}
+        gitHubLink={props.gitHubLink}
       />
     </>
   );

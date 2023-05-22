@@ -43,7 +43,7 @@ export default function ProjectModal(props) {
           <h3 className={styles.h3}>Skills</h3>
           <div className={styles["skills-wrapper"]}>
             {props.skills.map((skill) => (
-              <>{skill}</>
+              <div className={styles.skills}>{skill}</div>
             ))}
           </div>
         </div>
