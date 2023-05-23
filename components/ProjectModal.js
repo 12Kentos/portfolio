@@ -44,7 +44,10 @@ export default function ProjectModal(props) {
             <Link
               href={props.urlLink}
               target="_blank"
-              style={{ color: props.color }}
+              style={{
+                color: props.color,
+                border: `2px solid ${props.color}`,
+              }}
               className={`${styles.link} ${styles["link-left"]}`}
             >
               Visit Site
@@ -53,7 +56,7 @@ export default function ProjectModal(props) {
             <Link
               href={props.gitHubLink}
               target="_blank"
-              style={{ color: props.color }}
+              style={{ color: props.color, border: `2px solid ${props.color}` }}
               className={`${styles.link} ${styles["link-right"]}`}
             >
               View Repo

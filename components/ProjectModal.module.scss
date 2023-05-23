@@ -31,7 +31,7 @@
 
 .h2 {
   font-family: "Delius", cursive;
-  font-size: 4.8rem;
+  font-size: clamp(3rem, 3vw, 5rem);
 }
 
 .p {
@@ -47,7 +47,7 @@
 }
 
 .skills {
-  font-size: 2.5vw;
+  font-size: clamp(2rem, 3vw, 5rem);
   width: 80%;
   display: flex;
   align-items: center;
@@ -55,7 +55,18 @@
 }
 
 .link {
-  font-size: 3rem;
+  &:visited,
+  &:link {
+    font-size: clamp(0.5rem, 1.5vw, 3rem);
+    text-decoration: none;
+    border-radius: 1.5rem;
+    padding: 1rem;
+  }
+
+  &:hover,
+  &:active {
+    filter: brightness(115%);
+  }
 
   &-left {
     margin-right: auto;
