@@ -34,7 +34,7 @@ export default function Home() {
   const [secondFlag, setSecondFlag] = useState(false);
   const wrapperRef = useRef(null);
   const scrollToRef = useRef(null);
-  const [aboutModalOpen, setAboutModalOpen] = useState(false);
+  // const [aboutModalOpen, setAboutModalOpen] = useState(false);
 
   useEffect(() => {
     scrollToRef.current.scrollIntoView({
@@ -45,7 +45,6 @@ export default function Home() {
   }, []);
 
   const handleSetFlag = () => {
-    setAboutModalOpen(!aboutModalOpen);
     setFlag(true);
   };
 
@@ -68,10 +67,8 @@ export default function Home() {
       // console.log(panY);
 
       if (secondFlag) {
-        // console.log("First Flag");
         setWrapperStyle({ transform: `translate(${panX}px, ${panY}px)` });
       } else {
-        // console.log("Second Flag");
         setSecondFlag(true);
         setWrapperStyle({ transform: `translate(${-55}%, ${-60}%)` });
       }
@@ -88,14 +85,9 @@ export default function Home() {
   //   setFlag(true);
   // };
 
-  const toggleAboutModalOpen = () => {
-    setAboutModalOpen(!aboutModalOpen);
-    // if (flag) {
-    //   setFlag(false);
-    // } else {
-    //   setFlag(true);
-    // }
-  };
+  // const toggleAboutModalOpen = () => {
+  //   setAboutModalOpen(!aboutModalOpen);
+  // };
 
   const skills = [
     <FaHtml5 />,
@@ -124,9 +116,23 @@ export default function Home() {
       >
         <div className={styles.invis} ref={scrollToRef}></div>
 
-        <button className={styles["project-wrapper"]} onClick={handleSetFlag}>
-          <p className={styles["info"]}>About me</p>
-        </button>
+        {/* <button className={styles["project-wrapper"]} onClick={handleSetFlag}>
+          <p
+            className={styles["info"]}
+            style={{ color: "rgba(255, 255, 255, 1)" }}
+          >
+            About Me
+          </p>
+        </button> */}
+
+        <Project
+          about={true}
+          className={styles["project-wrapper"]}
+          setFlag={handleSetFlag}
+          imgClasses={styles["info"]}
+          skills={skills}
+          color={"rgb(83, 184, 117)"}
+        />
 
         <Project
           className={`${styles["project-wrapper"]} ${styles["project-four"]}`}
@@ -214,13 +220,13 @@ export default function Home() {
           skills={[skills[0], skills[2], skills[4]]}
         />
 
-        <AboutModal
+        {/* <AboutModal
           modalOpen={aboutModalOpen}
           closeModal={toggleAboutModalOpen}
           info="this is a test"
           skills={skills}
           closeButton={toggleAboutModalOpen}
-        />
+        /> */}
       </div>
     </>
   );

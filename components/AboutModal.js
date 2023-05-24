@@ -10,7 +10,7 @@ export default function ProjectModal(props) {
         onRequestClose={props.closeModal}
         style={{
           overlay: {
-            backgroundColor: "rgba(216, 212, 210, 1)",
+            backgroundColor: "rgba(216, 212, 210, .5)",
           },
           content: {
             top: "10vh",
@@ -21,6 +21,7 @@ export default function ProjectModal(props) {
             WebkitOverflowScrolling: "touch",
             borderRadius: "2rem",
             padding: "2rem",
+            "box-shadow": "0 1rem 3rem rgba(0,0,0,.5)",
           },
         }}
       >

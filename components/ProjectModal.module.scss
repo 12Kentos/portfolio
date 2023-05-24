@@ -1,10 +1,15 @@
-.modal-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  height: 100%;
-  gap: 1rem;
+.modal {
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    gap: 1rem;
+  }
+  &-about {
+    justify-content: center;
+  }
 }
 
 .close-btn {
@@ -16,6 +21,13 @@
   &:hover {
     cursor: pointer;
   }
+}
+
+.skills-wrapper {
+  max-width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+  gap: 1rem;
 }
 
 .img {
@@ -52,6 +64,10 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+
+  &-about {
+    font-size: clamp(4rem, 3.5vw, 6rem);
+  }
 }
 
 .link {
@@ -75,4 +91,25 @@
   &-right {
     margin-left: auto;
   }
+}
+
+.p-about {
+  font-size: 2rem;
+  max-width: 80%;
+  text-align: center;
+}
+
+.h2-about {
+  font-size: 4.8rem;
+  font-family: "Delius", cursive;
+}
+
+.h3-about {
+  font-size: 4rem;
+  font-family: "Delius", cursive;
+}
+
+.h4-about {
+  font-size: 3.5rem;
+  font-family: "Delius", cursive;
 }
