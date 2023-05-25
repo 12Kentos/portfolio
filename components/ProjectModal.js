@@ -5,6 +5,10 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 import Link from "next/link";
 
 export default function ProjectModal(props) {
+  // const mailTo = () => {
+  //   window.open("mailto:test@example.com?subject=subject&body=body");
+  // };
+
   return (
     <>
       <Modal
@@ -23,7 +27,7 @@ export default function ProjectModal(props) {
             WebkitOverflowScrolling: "touch",
             borderRadius: "2rem",
             padding: "2rem",
-            "box-shadow": "0 1rem 3rem rgba(0,0,0,.5)",
+            boxShadow: "0 1rem 3rem rgba(0,0,0,.5)",
           },
         }}
       >
@@ -36,10 +40,11 @@ export default function ProjectModal(props) {
           >
             <h2 className={styles["h2-about"]}>About me</h2>
             <p className={styles["p-about"]}>
-              I'm a long time avid IT guy, currently work as an IT admin, but
-              want to make the transition to a front end developer. Taking lots
-              of online classes, and hope to make the transition sooner rather
-              than later!
+              I'm a professional frontend dev with a passion to make projects
+              look good, and run well. I've been programming for a little over a
+              year now, and I'm currenlty working on polishing my frontend
+              skills, and then planning on working on some of my backend skills,
+              to become a well rounded programmer.
             </p>
             <h4 className={styles["h4-about"]}>Hobbies</h4>
             <p className={styles["p-about"]}>
@@ -52,11 +57,13 @@ export default function ProjectModal(props) {
                 <div
                   className={styles["skills-about"]}
                   style={{ color: props.color }}
+                  key={skill.id}
                 >
                   {skill}
                 </div>
               ))}
             </div>
+            {/* <button onClick={mailTo}>Mail</button> */}
           </div>
         ) : (
           <div className={styles["modal-wrapper"]}>

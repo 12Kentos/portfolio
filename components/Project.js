@@ -17,18 +17,23 @@ export default function Project(props) {
     <>
       <>
         {props.about ? (
-          <button className={`${props.className}`} onClick={toggleModal}>
+          <div className={`${props.className}`} onClick={toggleModal}>
+            <button className={styles.invis} onClick={toggleModal}></button>
             <p
               className={props.imgClasses}
               style={{ color: "rgba(255, 255, 255, 1)" }}
             >
               About Me
             </p>
-          </button>
+          </div>
         ) : (
           <div className={`${props.className}`} onClick={toggleModal}>
             <button className={styles.invis} onClick={toggleModal}></button>
-            <Image className={props.imgClasses} src={props.image} />
+            <Image
+              className={props.imgClasses}
+              src={props.image}
+              alt="Project Image"
+            />
           </div>
         )}
       </>

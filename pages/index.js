@@ -49,6 +49,10 @@ export default function Home() {
   };
 
   const mouseHandle = (e) => {
+    // console.log(window.innerWidth);
+
+    // console.log(window);
+
     if (flag) {
       const mouseX = e.clientX;
       const mouseY = e.clientY;
@@ -90,19 +94,19 @@ export default function Home() {
   // };
 
   const skills = [
-    <FaHtml5 />,
-    <FaCss3Alt />,
-    <FaSass />,
-    <SiTailwindcss />,
-    <DiJavascript1 />,
-    <FaReact />,
-    <SiRedux />,
-    <SiReactrouter />,
-    <TbBrandNextjs />,
-    <SiFramer />,
-    <SiFirebase />,
-    <FaGithub />,
-    <FaFigma />,
+    <FaHtml5 id={1} />,
+    <FaCss3Alt id={2} />,
+    <FaSass id={3} />,
+    <SiTailwindcss id={4} />,
+    <DiJavascript1 id={5} />,
+    <FaReact id={6} />,
+    <SiRedux id={7} />,
+    <SiReactrouter id={8} />,
+    <TbBrandNextjs id={9} />,
+    <SiFramer id={10} />,
+    <SiFirebase id={11} />,
+    <FaGithub id={12} />,
+    <FaFigma id={13} />,
   ];
 
   return (
@@ -143,9 +147,9 @@ export default function Home() {
           heading={"Twitter Clone"}
           color={"rgba(120, 192, 221, 1)"}
           info={
-            "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'"
+            "Twitter Clone is an app built to resemble twitter. It has the ability to authenticate users, and once you have been authenticated you can post tweets, like, and comment on other peoples tweets. You have the ability to delete your own comments/tweets and upload images. This project was built using NextJs, and the backend is utilizing Firebase."
           }
-          skills={[skills[3], skills[6], skills[7], skills[8]]}
+          skills={[skills[3], skills[8], skills[9], skills[10]]}
         />
 
         <Project
@@ -157,7 +161,7 @@ export default function Home() {
           heading={"Forkify"}
           color={"rgba(246, 151, 131, 1)"}
           info={
-            "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'"
+            "Forkify is the first big project I built using plain html/scss/javascript. It's an app that allows you to search for recipes gathered from around the web. Once you find a recipe you like, you can then add it to your bookmarks which are saved using local storage. You can also adjust the amount of servings you would like, and the instructions will adjust accordingly. You also have the capability of adding in your own recipes."
           }
           skills={[skills[0], skills[2], skills[4]]}
         />
@@ -173,7 +177,7 @@ export default function Home() {
           heading={"Multi-page Space Tourism Site"}
           color={"rgba(44, 73, 107)"}
           info={
-            "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'"
+            "This project was built using React, Scss, and React-Router. It's an imaginary site that allows users to imagine they are preparing to go into space. There are several different pages depicting what destination, crew and technology they would like to use on their voyage."
           }
           skills={[skills[2], skills[5], skills[7]]}
         />
@@ -187,7 +191,7 @@ export default function Home() {
           heading={"Ecommerce Product Page"}
           color={"rgb(228, 132, 1)"}
           info={
-            "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'"
+            "This project is a hypothetical product page for an ecommerce site. It was built using React and Scss. The user has the ability to change the color of shoe, and add however many they want to the cart. Checkout hasn't been implemented yet, but is planned for the future."
           }
           skills={[skills[2], skills[5]]}
         />
@@ -201,7 +205,7 @@ export default function Home() {
           heading={"Multi-step Form"}
           color={"rgba(158, 193, 238, 1)"}
           info={
-            "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'"
+            "This project is a multi-step form that has form validation to make sure everything that needs to be entered is there. It currently is not hooked up to a backend. It was the last project I built using html/scss/javascript."
           }
           skills={[skills[0], skills[2], skills[4]]}
         />
@@ -212,12 +216,12 @@ export default function Home() {
           image={reactMeals}
           urlLink={"https://12kentos-react-meals.netlify.app/"}
           gitHubLink={"https://github.com/12Kentos/React-Meals"}
-          heading={"Multi-step Form"}
+          heading={"ReactMeals"}
           color={"rgba(138, 43, 6, 1)"}
           info={
-            "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'"
+            "ReactMeals is a hypothetical food ordering site for a fictitious food company. Users are offered different meals from a backend, they are then allowed to place the order and the information is then sent to firebase. It was built using React, Scss, and Firebase for the database. Firebase's realtime database was used for this project."
           }
-          skills={[skills[0], skills[2], skills[4]]}
+          skills={[skills[2], skills[5], skills[10]]}
         />
 
         {/* <AboutModal
