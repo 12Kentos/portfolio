@@ -59,14 +59,14 @@
 }
 
 .skills {
-  font-size: clamp(3.5rem, 3vw, 5rem);
+  font-size: 5rem;
   width: 80%;
   display: flex;
   align-items: center;
   gap: 1rem;
 
   &-about {
-    font-size: clamp(4rem, 3.5vw, 6rem);
+    font-size: 6rem;
   }
 }
 
@@ -115,7 +115,84 @@
   font-family: "Delius", cursive;
 }
 
+.form {
+  min-width: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid #807e7d;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+
+  &:focus,
+  &:hover {
+    border: 1px solid rgb(83, 184, 117);
+  }
+}
+
+.text-area {
+  padding: 2rem;
+}
+
+.label {
+  font-size: 1.6rem;
+}
+
+.submit-btn {
+  border: 1px solid rgb(83, 184, 117);
+  background-color: transparent;
+  font-size: clamp(1.3rem, 1.5vw, 2rem);
+  text-decoration: none;
+  border-radius: 1rem;
+  padding: 1rem 2.5rem 1rem 2.5rem;
+  color: rgb(83, 184, 117);
+  outline: none;
+
+  &:focus,
+  &:hover {
+    filter: brightness(125%);
+    cursor: pointer;
+  }
+}
+
+.email-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  height: 100%;
+}
+
+.email-text {
+  color: rgb(83, 184, 117);
+  font-size: clamp(2rem, 4vw, 3.6rem);
+}
+
 @media (max-width: 67.5em) {
+  .skills {
+    &-about {
+      font-size: clamp(4rem, 3.5vw, 6rem);
+    }
+  }
+
+  .modal {
+    &-about {
+      height: inherit;
+    }
+  }
+}
+
+@media (max-width: 45em) {
   .img {
     height: 100%;
     &-wrapper {
@@ -126,5 +203,10 @@
 
   .skills {
     width: 95%;
+    font-size: clamp(3.5rem, 3vw, 5rem);
+
+    &-about {
+      font-size: clamp(4rem, 3.5vw, 6rem);
+    }
   }
 }

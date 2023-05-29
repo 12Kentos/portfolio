@@ -5,12 +5,18 @@ import styles from "./Project.module.scss";
 
 export default function Project(props) {
   const [modalOpen, setModalOpen] = useState(false);
+  const [emailSent, setEmailSent] = useState();
 
   const toggleModal = () => {
+    setEmailSent(false);
     setModalOpen(!modalOpen);
     if (props.about) {
       props.setFlag();
     }
+  };
+
+  const setEmailSentTrue = () => {
+    setEmailSent(true);
   };
 
   return (
@@ -39,6 +45,8 @@ export default function Project(props) {
       </>
 
       <ProjectModal
+        setEmailSent={setEmailSentTrue}
+        emailSent={emailSent}
         about={props.about}
         modalOpen={modalOpen}
         image={props.image}

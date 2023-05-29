@@ -9,7 +9,6 @@ import forkify from "../images/Forkify.jpg";
 import twitter from "../images/Twitter Clone.jpg";
 import reactMeals from "../images/React-Meals.jpg";
 import { useState, useRef, useEffect } from "react";
-import AboutModal from "@/components/AboutModal";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -34,7 +33,6 @@ export default function Home() {
   const [secondFlag, setSecondFlag] = useState(false);
   const wrapperRef = useRef(null);
   const scrollToRef = useRef(null);
-  // const [aboutModalOpen, setAboutModalOpen] = useState(false);
 
   useEffect(() => {
     scrollToRef.current.scrollIntoView({
@@ -42,6 +40,7 @@ export default function Home() {
       block: "center",
       inline: "center",
     });
+    document.getElementById("__next").className = `${styles["root-div"]}`;
   }, []);
 
   const handleSetFlag = () => {
@@ -49,9 +48,7 @@ export default function Home() {
   };
 
   const mouseHandle = (e) => {
-    // console.log(window.innerWidth);
-
-    // console.log(window);
+    console.log(window);
 
     if (flag) {
       const mouseX = e.clientX;
@@ -66,10 +63,6 @@ export default function Home() {
       const panX = maxX * xDecimal * -1;
       const panY = maxY * yDecimal * -1;
 
-      // setWrapperStyle({ transform: `translate(${panX}px, ${panY}px)` });
-      // console.log(panX);
-      // console.log(panY);
-
       if (secondFlag) {
         setWrapperStyle({ transform: `translate(${panX}px, ${panY}px)` });
       } else {
@@ -78,20 +71,6 @@ export default function Home() {
       }
     }
   };
-
-  // const openAboutModal = () => {
-  //   setFlag(false);
-  //   setAboutModalOpen(!aboutModalOpen);
-  // };
-
-  // const closeAboutModal = () => {
-  //   setAboutModalOpen(!aboutModalOpen);
-  //   setFlag(true);
-  // };
-
-  // const toggleAboutModalOpen = () => {
-  //   setAboutModalOpen(!aboutModalOpen);
-  // };
 
   const skills = [
     <FaHtml5 id={1} />,
@@ -120,18 +99,11 @@ export default function Home() {
       >
         <div className={styles.invis} ref={scrollToRef}></div>
 
-        {/* <button className={styles["project-wrapper"]} onClick={handleSetFlag}>
-          <p
-            className={styles["info"]}
-            style={{ color: "rgba(255, 255, 255, 1)" }}
-          >
-            About Me
-          </p>
-        </button> */}
-
         <Project
           about={true}
-          className={styles["project-wrapper"]}
+          className={`${styles["project-wrapper"]} ${styles["project-about"]} ${
+            flag && styles["after-click"]
+          }`}
           setFlag={handleSetFlag}
           imgClasses={styles["info"]}
           skills={skills}
@@ -223,27 +195,7 @@ export default function Home() {
           }
           skills={[skills[2], skills[5], skills[10]]}
         />
-
-        {/* <AboutModal
-          modalOpen={aboutModalOpen}
-          closeModal={toggleAboutModalOpen}
-          info="this is a test"
-          skills={skills}
-          closeButton={toggleAboutModalOpen}
-        /> */}
       </div>
     </>
   );
 }
-
-// import {
-//   FaHtml5,
-//   FaCss3Alt,
-//   FaSass,
-//   FaReact,
-//   FaGithub,
-//   FaFigma,
-// } from "react-icons/fa";
-// import { SiTailwindcss, SiFirebase } from "react-icons/si";
-// import { DiJavascript1 } from "react-icons/di";
-// import { TbBrandNextjs } from "react-icons/tb";
