@@ -5,20 +5,20 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 import Link from "next/link";
 
 export default function ProjectModal(props) {
-  const formSubmission = (e) => {
-    e.preventDefault();
+  // const formSubmission = (e) => {
+  //   e.preventDefault();
 
-    const myForm = e.target;
-    const formData = new FormData(myForm);
+  //   const myForm = e.target;
+  //   const formData = new FormData(myForm);
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => props.setEmailSent())
-      .catch((error) => alert(error));
-  };
+  //   fetch("/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //     body: new URLSearchParams(formData).toString(),
+  //   })
+  //     .then(() => props.setEmailSent())
+  //     .catch((error) => alert(error));
+  // };
 
   return (
     <>
@@ -87,7 +87,7 @@ export default function ProjectModal(props) {
                   method="POST"
                   className={styles.form}
                   data-netlify="true"
-                  onSubmit={formSubmission}
+                  // onSubmit={formSubmission}
                   action="/success"
                 >
                   <input type="hidden" name="form-name" value="contact" />
