@@ -3,11 +3,8 @@ import Image from "next/image";
 import styles from "./ProjectModal.module.scss";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import Link from "next/link";
-import { useState } from "react";
 
 export default function ProjectModal(props) {
-  // const [emailSent, setEmailSent] = useState();
-
   const formSubmission = (e) => {
     e.preventDefault();
     props.setEmailSent();
