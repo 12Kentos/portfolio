@@ -8,7 +8,7 @@ export default function ProjectModal(props) {
   const formSubmission = (e) => {
     e.preventDefault();
 
-    const myForm = event.target;
+    const myForm = e.target;
     const formData = new FormData(myForm);
 
     fetch("/", {
