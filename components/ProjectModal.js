@@ -90,6 +90,7 @@ export default function ProjectModal(props) {
                   onSubmit={formSubmission}
                   action="/success"
                 >
+                  <input type="hidden" name="form-name" value="contact" />
                   <p>
                     <label htmlFor="yourname" className={styles.label}>
                       Your Name:

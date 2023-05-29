@@ -48,8 +48,6 @@ export default function Home() {
   };
 
   const mouseHandle = (e) => {
-    console.log(window);
-
     if (flag) {
       const mouseX = e.clientX;
       const mouseY = e.clientY;
