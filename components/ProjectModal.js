@@ -88,7 +88,7 @@ export default function ProjectModal(props) {
                   className={styles.form}
                   data-netlify="true"
                   // onSubmit={formSubmission}
-                  action="/success"
+                  action="/"
                 >
                   <input type="hidden" name="form-name" value="contact" />
                   <p>
