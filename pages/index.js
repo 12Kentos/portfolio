@@ -88,6 +88,13 @@ export default function Home() {
 
   return (
     <>
+      {/* <!-- A little help for the Netlify bots*/}
+      <form name="contact" netlify hidden className={styles.hidden}>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <textarea name="message"></textarea>
+      </form>
+
       <Head></Head>
       <div
         className={styles["body-wrapper"]}
