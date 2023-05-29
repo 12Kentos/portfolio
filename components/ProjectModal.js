@@ -7,7 +7,17 @@ import Link from "next/link";
 export default function ProjectModal(props) {
   const formSubmission = (e) => {
     e.preventDefault();
-    props.setEmailSent();
+
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => props.setEmailSent())
+      .catch((error) => alert(error));
   };
 
   return (
@@ -78,6 +88,7 @@ export default function ProjectModal(props) {
                   className={styles.form}
                   data-netlify="true"
                   onSubmit={formSubmission}
+                  action="/success"
                 >
                   <p>
                     <label htmlFor="yourname" className={styles.label}>
