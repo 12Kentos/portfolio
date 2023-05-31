@@ -6,7 +6,7 @@ import multiForm from "../images/Multi-Step-Form.jpg";
 import shoes from "../images/Ecommerce-Product-Page.jpg";
 import space from "../images/Space-Tourism-Website.jpg";
 import forkify from "../images/Forkify.jpg";
-import twitter from "../images/Twitter Clone.jpg";
+import twitter from "../images/Twitter-Clone.jpg";
 import reactMeals from "../images/React-Meals.jpg";
 import { useState, useRef, useEffect } from "react";
 import {

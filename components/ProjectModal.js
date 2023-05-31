@@ -19,7 +19,6 @@ export default function ProjectModal(props) {
   //     .then(() => props.setEmailSent())
   //     .catch((error) => alert(error));
   // };
-  // Test
 
   return (
     <>
