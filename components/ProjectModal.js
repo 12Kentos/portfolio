@@ -50,7 +50,7 @@ export default function ProjectModal(props) {
                 <p className={styles["p-about"]}>
                   I'm a professional frontend developer, with a passion to make
                   projects look great and run even better. I've been programming
-                  for a little over a year, and I'm currenlty working on
+                  for a little over a year, and I'm currently working on
                   polishing my frontend skills. I then plan to work on some of
                   my backend skills, to become a well rounded full stack
                   developer.
