@@ -24,7 +24,11 @@ export default function Project(props) {
       <>
         {props.about ? (
           <div className={`${props.className}`} onClick={toggleModal}>
-            <button className={styles.invis} onClick={toggleModal}></button>
+            <button
+              className={styles.invis}
+              onClick={toggleModal}
+              aria-label={props.ariaLabel}
+            ></button>
             <p
               className={props.imgClasses}
               style={{ color: "rgba(255, 255, 255, 1)" }}
@@ -34,7 +38,11 @@ export default function Project(props) {
           </div>
         ) : (
           <div className={`${props.className}`} onClick={toggleModal}>
-            <button className={styles.invis} onClick={toggleModal}></button>
+            <button
+              className={styles.invis}
+              onClick={toggleModal}
+              aria-label={props.ariaLabel}
+            ></button>
             <Image
               className={props.imgClasses}
               src={props.image}

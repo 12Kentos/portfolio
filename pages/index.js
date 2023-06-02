@@ -2,13 +2,19 @@ import Head from "next/head";
 import styles from "./index.module.scss";
 import Project from "@/components/Project";
 
+// Image imports
+
 import multiForm from "../images/Multi-Step-Form.jpg";
 import shoes from "../images/Ecommerce-Product-Page.jpg";
 import space from "../images/Space-Tourism-Website.jpg";
 import forkify from "../images/Forkify.jpg";
 import twitter from "../images/Twitter-Clone.jpg";
 import reactMeals from "../images/React-Meals.jpg";
+
 import { useState, useRef, useEffect } from "react";
+
+// Icon imports
+
 import {
   FaHtml5,
   FaCss3Alt,
@@ -34,14 +40,21 @@ export default function Home() {
   const wrapperRef = useRef(null);
   const scrollToRef = useRef(null);
 
+  // UseEffect centers the screen over the center element (The about block)
+
   useEffect(() => {
     scrollToRef.current.scrollIntoView({
       behavior: "instant",
       block: "center",
       inline: "center",
     });
+
+    // Beleove getElementById selectes the __next div, which is the root div in a NextJS project, styles were needed to make the project work
+
     document.getElementById("__next").className = `${styles["root-div"]}`;
   }, []);
+
+  // Below flag is triggered when the about block has been clicked and allows the sreen to "move"
 
   const handleSetFlag = () => {
     setFlag(true);
@@ -95,7 +108,13 @@ export default function Home() {
         <textarea name="message"></textarea>
       </form>
 
-      <Head></Head>
+      <Head>
+        <title>Kent OSullivan Portfolio</title>
+        <meta
+          name="description"
+          content="Browse a huge list of highly active React meetups!"
+        />
+      </Head>
       <div
         className={styles["body-wrapper"]}
         style={wrapperStyle}
@@ -113,6 +132,7 @@ export default function Home() {
           imgClasses={styles["info"]}
           skills={skills}
           color={"rgb(83, 184, 117)"}
+          ariaLabel={"About me"}
         />
 
         <Project
@@ -124,9 +144,10 @@ export default function Home() {
           heading={"Twitter Clone"}
           color={"rgba(120, 192, 221, 1)"}
           info={
-            "Twitter Clone is an app built to resemble twitter. It has the ability to authenticate users, and once you have been authenticated you can post tweets, like, and comment on other peoples tweets. You have the ability to delete your own comments/tweets and upload images. This project was built using NextJs, and the backend is utilizing Firebase."
+            "Twitter Clone is an app built to resemble Twitter. This project was built using NextJs, and the backend is utilizing Firebase. It has the ability to authenticate users and once authenticated, you can like and comment on posts and create your own tweets. You also have the ability to delete your own comments/tweets and upload images."
           }
           skills={[skills[3], skills[8], skills[9], skills[10]]}
+          ariaLabel={"Project one"}
         />
 
         <Project
@@ -138,9 +159,10 @@ export default function Home() {
           heading={"Forkify"}
           color={"rgba(246, 151, 131, 1)"}
           info={
-            "Forkify is the first big project I built using plain html/scss/javascript. It's an app that allows you to search for recipes gathered from around the web. Once you find a recipe you like, you can then add it to your bookmarks which are saved using local storage. You can also adjust the amount of servings you would like, and the instructions will adjust accordingly. You also have the capability of adding in your own recipes."
+            "Forkify is the first big project I built using plain html/scss/javascript. It's an app that allows you to search for recipes gathered from around the web. Once you find a recipe you like, you can then add it to your bookmarks which are saved using local storage. You can also adjust the amount of servings you would like and the instructions will adjust accordingly. Additionaly you have the capability of adding in your own recipes."
           }
           skills={[skills[0], skills[2], skills[4]]}
+          ariaLabel={"Project two"}
         />
 
         <Project
@@ -154,9 +176,10 @@ export default function Home() {
           heading={"Multi-page Space Tourism Site"}
           color={"rgba(44, 73, 107)"}
           info={
-            "This project was built using React, Scss, and React-Router. It's an imaginary site that allows users to imagine they are preparing to go into space. There are several different pages depicting what destination, crew and technology they would like to use on their voyage."
+            "This multi-page project was built using React, Scss, and React-Router. It's a hypothetical site that allows users to book travel into space. There are several different pages detailing destinations, crew and technology that are available for their voyage."
           }
           skills={[skills[2], skills[5], skills[7]]}
+          ariaLabel={"Project three"}
         />
 
         <Project
@@ -168,9 +191,10 @@ export default function Home() {
           heading={"Ecommerce Product Page"}
           color={"rgb(228, 132, 1)"}
           info={
-            "This project is a hypothetical product page for an ecommerce site. It was built using React and Scss. The user has the ability to change the color of shoe, and add however many they want to the cart. Checkout hasn't been implemented yet, but is planned for the future."
+            "This project is a hypothetical product page for an ecommerce site. It was built using React and Scss. The user has the ability to view and select the color of shoe, and add the desired quantity to the cart. Checkout hasn't been implemented yet, but is planned for the future."
           }
           skills={[skills[2], skills[5]]}
+          ariaLabel={"Project four"}
         />
 
         <Project
@@ -182,9 +206,10 @@ export default function Home() {
           heading={"Multi-step Form"}
           color={"rgba(158, 193, 238, 1)"}
           info={
-            "This project is a multi-step form that has form validation to make sure everything that needs to be entered is there. It currently is not hooked up to a backend. It was the last project I built using html/scss/javascript."
+            "This was the last project I built using html/scss/javascript before moving on to work with React. It is a multi-step form with custom validation, allowing users to sign up for an online service with yearly or monthly payment options."
           }
           skills={[skills[0], skills[2], skills[4]]}
+          ariaLabel={"Project five"}
         />
 
         <Project
@@ -196,9 +221,10 @@ export default function Home() {
           heading={"ReactMeals"}
           color={"rgba(138, 43, 6, 1)"}
           info={
-            "ReactMeals is a hypothetical food ordering site for a fictitious food company. Users are offered different meals from a backend, they are then allowed to place the order and the information is then sent to firebase. It was built using React, Scss, and Firebase for the database. Firebase's realtime database was used for this project."
+            "ReactMeals is a hypothetical food ordering site for a fictitious food company. From a backend, users are offered different meal options and allowed to place an order. The order information is then sent to Firebase. This project was built using React, Scss, and Firebase."
           }
           skills={[skills[2], skills[5], skills[10]]}
+          ariaLabel={"Project six"}
         />
       </div>
     </>

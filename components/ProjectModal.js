@@ -5,21 +5,6 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 import Link from "next/link";
 
 export default function ProjectModal(props) {
-  // const formSubmission = (e) => {
-  //   e.preventDefault();
-
-  //   const myForm = e.target;
-  //   const formData = new FormData(myForm);
-
-  //   fetch("/", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  //     body: new URLSearchParams(formData).toString(),
-  //   })
-  //     .then(() => props.setEmailSent())
-  //     .catch((error) => alert(error));
-  // };
-
   return (
     <>
       <Modal
@@ -63,11 +48,12 @@ export default function ProjectModal(props) {
               >
                 <h2 className={styles["h2-about"]}>About me</h2>
                 <p className={styles["p-about"]}>
-                  I'm a professional frontend dev with a passion to make
-                  projects look good, and run well. I've been programming for a
-                  little over a year now, and I'm currenlty working on polishing
-                  my frontend skills, and then planning on working on some of my
-                  backend skills, to become a well rounded full stack developer.
+                  I'm a professional frontend developer, with a passion to make
+                  projects look great and run even better. I've been programming
+                  for a little over a year, and I'm currenlty working on
+                  polishing my frontend skills. I then plan to work on some of
+                  my backend skills, to become a well rounded full stack
+                  developer.
                 </p>
                 <h3 className={styles["h3-about"]}>Skills</h3>
                 <div className={styles["skills-wrapper"]}>
@@ -87,7 +73,6 @@ export default function ProjectModal(props) {
                   method="POST"
                   className={styles.form}
                   data-netlify="true"
-                  // onSubmit={formSubmission}
                   action="/Success"
                 >
                   <input type="hidden" name="form-name" value="contact" />
