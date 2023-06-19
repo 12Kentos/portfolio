@@ -110,10 +110,7 @@ export default function Home() {
 
       <Head>
         <title>Kent OSullivan Portfolio</title>
-        <meta
-          name="description"
-          content="Browse a huge list of highly active React meetups!"
-        />
+        <meta name="portfolio" content="Kent O'Sullivan Portfolio" />
       </Head>
       <div
         className={styles["body-wrapper"]}
