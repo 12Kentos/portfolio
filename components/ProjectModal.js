@@ -41,6 +41,7 @@ export default function ProjectModal(props) {
             </button>
           </div>
         ) : (
+          // Depending on if it is the about section or a proejct, will change the output
           <>
             {props.about ? (
               <div

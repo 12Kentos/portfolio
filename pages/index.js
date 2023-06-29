@@ -60,6 +60,8 @@ export default function Home() {
     setFlag(true);
   };
 
+  // Below take the mouse position, and moves the screen accordingly
+
   const mouseHandle = (e) => {
     if (flag) {
       const mouseX = e.clientX;
@@ -82,6 +84,8 @@ export default function Home() {
       }
     }
   };
+
+  // List of skills for porjects and about me sections
 
   const skills = [
     <FaHtml5 id={1} />,
@@ -118,7 +122,12 @@ export default function Home() {
         onMouseMove={mouseHandle}
         ref={wrapperRef}
       >
+
+        {/* Below is a ref for the screen to focus on when loading, this way the about me section is in the middle of the screen */}
+        
         <div className={styles.invis} ref={scrollToRef}></div>
+
+        {/* Below is the about me section */}
 
         <Project
           about={true}
@@ -131,6 +140,8 @@ export default function Home() {
           color={"rgb(83, 184, 117)"}
           ariaLabel={"About me"}
         />
+
+        {/* Below are the different projects I've done */}
 
         <Project
           className={`${styles["project-wrapper"]} ${styles["project-four"]}`}

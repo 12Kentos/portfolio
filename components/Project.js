@@ -19,6 +19,8 @@ export default function Project(props) {
     setEmailSent(true);
   };
 
+  // Below creates the hover effect depending on if the project is the about me or an actual project
+
   return (
     <>
       <>
